@@ -33,7 +33,8 @@ function BleveTokenizerModalCtrl($scope, $modalInstance, $http,
 
     $scope.tokenizerTypeTemplates = {
         "regexp": sp + "/partials/analysis/tokenizers/regexp.html",
-        "exception": sp + "/partials/analysis/tokenizers/exception.html"
+        "exception": sp + "/partials/analysis/tokenizers/exception.html",
+        "scws": sp + "/partials/analysis/tokenizers/scws.html"
     };
 
     $scope.tokenizerTypeDefaults = {
@@ -46,6 +47,11 @@ function BleveTokenizerModalCtrl($scope, $modalInstance, $http,
             return {
                 "exceptions": [],
                 "tokenizer": "unicode"
+            };
+        },
+        "scws": function() {
+            return {
+                "dict": ""
             };
         }
     };
